@@ -1,0 +1,25 @@
+
+Installed packages: ['pyyaml', 'rsa', 'python-dateutil', 'botocore', 'awscli', 'jmespath', 'docutils', 's3transfer', 'pyasn1', 'certifi', 'tzdata', 'pytz', 'setuptools', 'cryptography', 'conda', 'pyopenssl', 'pip', 'argon2-cffi', 'argon2-cffi-bindings', 'pillow', 'tqdm', 'isort', 'django-dbbackup', 'bcrypt', 'asgiref', 'idna', 'charset-normalizer', 'django', 'requests', 'pycparser', 'pylint', 'astroid', 'django-filter', 'markupsafe', 'mysqlclient', 'conda-package-handling', 'urllib3', 'cffi', 'six', 'wrapt', 'django-crispy-forms', 'pysocks', 'django-widget-tweaks', 'lazy-object-proxy', 'pluggy', 'wheel', 'django-sslserver', 'zstandard', 'ruamel.yaml', 'ua-parser', 'toolz', 'brotlipy', 'conda-package-streaming', 'django-graylog', 'pycosat', 'mccabe', 'colorama', 'django-login-required-middleware', 'sqlparse', 'ruamel.yaml.clib', 'conda-content-trust']
+
+Python Package Audit SUCCESS!!
+/home/ubuntu/project/DjangoERP/DjangoERP/InventoryManagement-Django/module1
+
+Installed packages: ['pyyaml', 'rsa', 'python-dateutil', 'botocore', 'awscli', 'jmespath', 'docutils', 's3transfer', 'pyasn1', 'certifi', 'tzdata', 'pytz', 'setuptools', 'cryptography', 'conda', 'pyopenssl', 'pip', 'argon2-cffi', 'argon2-cffi-bindings', 'pillow', 'tqdm', 'isort', 'django-dbbackup', 'bcrypt', 'asgiref', 'idna', 'charset-normalizer', 'django', 'requests', 'pycparser', 'pylint', 'astroid', 'django-filter', 'markupsafe', 'mysqlclient', 'conda-package-handling', 'urllib3', 'cffi', 'six', 'wrapt', 'django-crispy-forms', 'pysocks', 'django-widget-tweaks', 'lazy-object-proxy', 'pluggy', 'wheel', 'django-sslserver', 'zstandard', 'ruamel.yaml', 'ua-parser', 'toolz', 'brotlipy', 'conda-package-streaming', 'django-graylog', 'pycosat', 'mccabe', 'colorama', 'django-login-required-middleware', 'sqlparse', 'ruamel.yaml.clib', 'conda-content-trust']
+
+Python Package Audit SUCCESS!!
+/home/ubuntu/project/DjangoERP/DjangoERP/InventoryManagement-Django/module1
+
+Installed packages: ['pyyaml', 'rsa', 'python-dateutil', 'botocore', 'awscli', 'jmespath', 'docutils', 's3transfer', 'pyasn1', 'certifi', 'tzdata', 'pytz', 'setuptools', 'cryptography', 'conda', 'pyopenssl', 'pip', 'argon2-cffi', 'argon2-cffi-bindings', 'pillow', 'tqdm', 'isort', 'django-dbbackup', 'bcrypt', 'asgiref', 'idna', 'charset-normalizer', 'django', 'requests', 'pycparser', 'pylint', 'astroid', 'django-filter', 'markupsafe', 'mysqlclient', 'conda-package-handling', 'urllib3', 'cffi', 'six', 'wrapt', 'django-crispy-forms', 'pysocks', 'django-widget-tweaks', 'lazy-object-proxy', 'pluggy', 'wheel', 'django-sslserver', 'zstandard', 'ruamel.yaml', 'ua-parser', 'toolz', 'brotlipy', 'conda-package-streaming', 'django-graylog', 'pycosat', 'mccabe', 'colorama', 'django-login-required-middleware', 'sqlparse', 'ruamel.yaml.clib', 'conda-content-trust']
+
+Python Package Audit SUCCESS!!
+/home/ubuntu/project/DjangoERP/DjangoERP/InventoryManagement-Django/module1
+
+Installed packages: ['pyyaml', 'rsa', 'python-dateutil', 'botocore', 'awscli', 'jmespath', 'docutils', 's3transfer', 'pyasn1', 'certifi', 'tzdata', 'pytz', 'setuptools', 'cryptography', 'conda', 'pyopenssl', 'pip', 'argon2-cffi', 'argon2-cffi-bindings', 'pillow', 'tqdm', 'isort', 'django-dbbackup', 'bcrypt', 'asgiref', 'idna', 'charset-normalizer', 'django', 'requests', 'pycparser', 'pylint', 'astroid', 'django-filter', 'markupsafe', 'mysqlclient', 'conda-package-handling', 'urllib3', 'cffi', 'six', 'wrapt', 'django-crispy-forms', 'pysocks', 'django-widget-tweaks', 'lazy-object-proxy', 'pluggy', 'wheel', 'django-sslserver', 'zstandard', 'ruamel.yaml', 'ua-parser', 'toolz', 'brotlipy', 'conda-package-streaming', 'django-graylog', 'pycosat', 'mccabe', 'colorama', 'django-login-required-middleware', 'sqlparse', 'ruamel.yaml.clib', 'conda-content-trust']
+
+Python Package Audit SUCCESS!!
+/home/ubuntu/project/DjangoERP/DjangoERP/InventoryManagement-Django/module1
+
+Installed packages: ['pyyaml', 'rsa', 'python-dateutil', 'botocore', 'awscli', 'jmespath', 'docutils', 's3transfer', 'pyasn1', 'certifi', 'tzdata', 'pytz', 'setuptools', 'cryptography', 'conda', 'pyopenssl', 'pip', 'argon2-cffi', 'argon2-cffi-bindings', 'pillow', 'tqdm', 'isort', 'django-dbbackup', 'bcrypt', 'asgiref', 'idna', 'charset-normalizer', 'django', 'requests', 'pycparser', 'pylint', 'astroid', 'django-filter', 'markupsafe', 'mysqlclient', 'conda-package-handling', 'urllib3', 'cffi', 'six', 'wrapt', 'django-crispy-forms', 'pysocks', 'django-widget-tweaks', 'lazy-object-proxy', 'pluggy', 'wheel', 'django-sslserver', 'zstandard', 'ruamel.yaml', 'ua-parser', 'toolz', 'brotlipy', 'conda-package-streaming', 'django-graylog', 'pycosat', 'mccabe', 'colorama', 'django-login-required-middleware', 'sqlparse', 'ruamel.yaml.clib', 'conda-content-trust']
+
+Python Package Audit SUCCESS!!
+/home/ubuntu/project/DjangoERP/DjangoERP/InventoryManagement-Django/module1

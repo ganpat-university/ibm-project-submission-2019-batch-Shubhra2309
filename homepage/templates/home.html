@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block title %} Home {% endblock title %}
+
+
+{% block content %}
+<style>
+.btn-group button {
+  background-color: #04AA6D; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: white;
+}
+</style>
+
+<div style="color:#464646; font-style: bold; font-size: 3rem; border-bottom: 1px solid #464646;">Welcome, {{ request.user.username }}
+</div>
+
+<br>
+
+<br>
+<br>
+
+<div id="container" style="position: relative; height:45vh; border: 1.2mm ridge #4e6570; border-radius: 30px;"
+     class="align-middle table-bordered">
+    <canvas id="bar-graph"></canvas>
+</div>
+<br>
+<div id="contain" style="position: relative; height:45vh; border: 1.2mm ridge #4e6570; border-radius: 30px;"
+     class="align-middle table-bordered">
+    <canvas id="pie-graph"></canvas>
+</div>
+
+
+<br>
+
+<div class="row">
+    <div class="col-md-6">
+        <a href="{% url 'select-supplier' %}" class="btn btn-success btn-lg btn-block btn-huge">New Incoming Stock</a>
+    </div>
+    <div class="col-md-6">
+        <a href="{% url 'new-sale' %}" class="btn btn-success btn-lg btn-block btn-huge">New Outgoing Stock</a>
+    </div>
+</div>
+
+<br>
+
+<div class="content-section">
+    <div class="row">
+
+        <div class="col-md-6">
+            <div style="color: #4e6570; font-style: bold; font-size: 1.3em; border-bottom: 2px solid #4e6570">Recent
+                Sales
+            </div>
+            <br>
+            {% for item in sales %}
+            {% if not forloop.first %}
+            <br>
+            <div style="border-bottom: 0.5px solid #4e6570"></div>
+            <br>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-9">
+                    Bill No: #{{ item.billno }} <br>
+                    Purchased by <b>{{ item.name }}</b> <br>
+                    <small><i>{{ item.time.date }}</i></small>
+                </div>
+                <div class="col-md-2"><br> ₹{{ item.get_total_price }} <br> <a href="{% url 'sale-bill' item.billno %}">View
+                    Bill</a></div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-6">
+            <div style="color: #4e6570; font-style: bold; font-size: 1.3em; border-bottom: 2px solid #4e6570">Recent
+                Purchases
+            </div>
+            <br>
+            {% for item in purchases %}
+            {% if not forloop.first %}
+            <br>
+            <div style="border-bottom: 0.5px solid #4e6570"></div>
+            <br>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-9">
+                    Bill No: #{{ item.billno }} <br>
+                    Purchased by <b>{{ item.supplier.name }}</b> <br>
+                    <small><i>{{ item.time.date }}</i></small>
+                </div>
+                <div class="col-md-2"><br>₹{{ item.get_total_price }} <br> <a
+                        href="{% url 'purchase-bill' item.billno %}">View Bill</a></div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+<!-- Loading Chart JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="{% static 'js/Chart.min.js' %}"></script>
+
+<script>
+        Chart.defaults.global.defaultFontColor = '#3c3c3c';
+
+        //configuration for the bar graph
+        var barConfig = {
+            type: 'bar',
+            'barSizeRatio': 0.60,
+            data: {
+                datasets: [{
+                    backgroundColor: ["#F39C12", "#36A2EB", "#D32F2F","#546E7A","#43A047","#8D6E63","#8E24AA","#330000","#FF0033"],
+                    label: 'Stock in Inventory',
+                    labels: {{labels|safe}},
+                    data: {{ data|safe }},
+                }],
+                labels: {{ labels|safe }}
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                
+                scales:{
+                yAxes:[{
+                display:true,
+                ticks:{
+                beginAtZero:true
+                },
+                }]
+                },
+            },
+             plugins: [ChartDataLabels],
+        };
+
+
+        //runs all charts on loading the webpage
+        window.onload = function() {
+            var ctx = document.getElementById('bar-graph').getContext('2d');
+            window.BarStock = new Chart(ctx, barConfig);
+        };
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+<script>
+  const data = {
+    labels: {{labels|safe}},
+    datasets: [
+      {
+        label: "My First Dataset",
+        data: {{data|safe}},
+        backgroundColor: ["#F39C12", "#36A2EB", "#D32F2F","#546E7A","#43A047","#8D6E63","#8E24AA","#330000","#FF0033"],
+        hoverOffset: 4,
+      },
+    ],
+    labels: {{ labels|safe }}
+  };
+
+  const options = {
+
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: [ChartDataLabels],
+  };
+
+
+const myChart = new Chart(document.getElementById("pie-graph"), {
+    type: "pie",
+    data: data,
+    options: options,
+  });
+</script>
+
+{% endblock content %}

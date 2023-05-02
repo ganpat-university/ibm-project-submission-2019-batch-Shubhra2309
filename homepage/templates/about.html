@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block title %} About {% endblock title %}
+
+
+{% block content %}
+    
+    {% if not user.is_authenticated  %}
+        <br>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Go Back</a>
+    {% endif %}    
+    
+    <div class="align-middle" style="color: #4caf50; font-style: bold; font-size: 3rem;">Group - 12</div>
+    <div class="align-middle" style="color: rgb(73, 73, 73)">A Secure and Scalable Solution for Businesses</div>
+    <br><br>
+
+    <div class="align-middle"> 
+        <h2 style="color:#4caf50">| About |</h3> <br>
+            <p>
+                This is a project developed by students from CS,CBA,BDA. Dhairya Vora, Shubhra Arora, Jeet Shelat
+
+            </p>
+        <br>
+    </div>
+        <h2 style="color:#4caf50" class="align-middle">| Contact |</h3> <br>
+            <ul style="display:table; margin:0 auto; ">
+                <li style="color:#494949;">Dhairya Vora: dhairyavora19@gnu.ac.in</li>
+                <li style="color:#494949;">Jeet Shelat: jeetshelat19@gnu.ac.in</li>
+                <li style="color:#494949;">Shubhra Arora: shubhraarora19@gnu.ac.in</li>
+
+            </ul>  
+        <br>
+
+
+{% endblock content %}

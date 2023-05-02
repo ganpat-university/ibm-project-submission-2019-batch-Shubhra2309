@@ -1,0 +1,2 @@
+To run the server:
+py manage.py runsslserver  --certificate HTTPScertificate/cert.pem --key HTTPScertificate/key.pem
